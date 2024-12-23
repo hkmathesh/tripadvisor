@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    margin: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.header__s2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__s2 img {
+    width: 30px;
+    height: 30px;
+}
+
+.header__s2 span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header__s3 {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__s4 {
+    display: none;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    /* Prevents wrapping of flex items */
+    overflow-x: auto;
+    /* Enables horizontal scrolling */
+    padding-bottom: 10px;
+    /* Adds space between navbar items and the scroll bar */
+    margin-top: 20px;
+}
+
+.navbar__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    /* Prevents wrapping of navbar items */
+    padding-bottom: 5px;
+
+}
+
+.navbar__items:hover {
+    border-bottom: 2px solid rgb(117, 113, 113);
+    opacity: 0.8;
+}
+
+.navbar__items__default {
+    border-bottom: 2px solid black;
+}
+
+.navbar__items img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Search box */
+.search {
+    border: 2px solid gainsboro;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search__s1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.search__s1__searchbox {
+    padding: 10px;
+    border: none;
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.search__s1__searchbox:focus {
+    outline: none;
+}
+
+.search__s2 {
+    padding: 10px;
+}
+
+.search__s2__search-btn {
+    background-color: #84E9BD;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.search__s2__search-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* Responsive designs */
+
+/* Tablet */
+@media screen and (min-width: 750px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    /* Header */
+    .header {
+        display: flex;
+        gap: 20px;
+    }
+
+    .header__s2 {
+        justify-content: flex-start;
+        flex-grow: 1;
+    }
+
+    .header__s2 span {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .header__s2 img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header__s3 {
+        display: none;
+    }
+
+    .header__s4 {
+        display: flex;
+    }
+
+    .header__s4__signin-btn {
+        background-color: black;
+        border: none;
+        padding: 10px;
+        border-radius: 30px;
+        width: 100%;
+        font-size: 14px;
+        color: white;
+    }
+
+    .header__s4__signin-btn:hover {
+        opacity: 0.8;
+    }
+
+    .whereto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .whereto h1 {
+        font-size: 45px;
+    }
+
+    /* Search box */
+    .search {
+        border: 2px solid gainsboro;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        border-radius: 50px;
+        padding: 10px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .search__s1 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5px;
+        padding: 10px;
+        border: none;
+        flex-grow: 1;
+    }
+
+    .search__s1__searchbox {
+        padding: 0;
+        border: none;
+        flex-grow: 1;
+        font-size: 16px;
+    }
+
+    .search__s2__search-btn {
+        background-color: #84E9BD;
+        border: none;
+        padding: 15px;
+        border-radius: 30px;
+        width: fit-content;
+        font-size: 16px;
+    }
+
+    .search__s2 {
+        padding: 0;
+    }
+
+
+}
+
+/* Phones */
+@media screen and (max-width: 756px) {
+    .navbar {
+        width: auto;
+        /* The navbar will now trigger horizontal scrolling */
+    }
+}
