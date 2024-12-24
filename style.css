@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +10,6 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
-    margin: 20px;
 }
 
 /* Header */
@@ -19,6 +19,7 @@ body {
     align-items: center;
     gap: 10px;
     padding: 10px;
+    margin: 10px;
 }
 
 .header__s2 {
@@ -51,6 +52,12 @@ body {
     display: none;
 }
 
+/* Where to */
+.whereto {
+    display: none;
+    ;
+}
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -63,7 +70,7 @@ body {
     /* Enables horizontal scrolling */
     padding-bottom: 10px;
     /* Adds space between navbar items and the scroll bar */
-    margin-top: 20px;
+    margin: 30px 10px 10px 10px;
 }
 
 .navbar__items {
@@ -97,7 +104,7 @@ body {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     border-radius: 10px;
     padding: 10px;
-    margin-top: 20px;
+    margin: 30px 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -128,17 +135,88 @@ body {
 }
 
 .search__s2__search-btn {
-    background-color: #84E9BD;
+    background-color: #34E0A1;
     border: none;
     padding: 15px;
     border-radius: 30px;
     width: 100%;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .search__s2__search-btn:hover {
     opacity: 0.8;
 }
+
+/* Home image */
+.home {
+    background-color: #DCCAFF;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #301D49;
+}
+
+.home__s1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 10px 0 10px;
+}
+
+.home__s1__row1 {
+    font-size: 12px;
+}
+
+.home__s1__row1 span {
+    background-color: white;
+    padding: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.home__s1__row4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #301D49;
+    padding: 15px;
+    border: none;
+    border-radius: 100px;
+    color: white;
+    width: fit-content;
+}
+
+.home__s1__row4:hover {
+    background-color: #52327C;
+}
+
+.home__s2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__s2 img {
+    width: 350px;
+}
+
+.home__s3 {
+    display: none;
+}
+
+
+
+
 
 
 /* Responsive designs */
@@ -210,7 +288,7 @@ body {
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         border-radius: 50px;
         padding: 10px;
-        margin-top: 20px;
+        margin: 30px 10px 10px 10px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -236,17 +314,84 @@ body {
     }
 
     .search__s2__search-btn {
-        background-color: #84E9BD;
+        background-color: #34E0A1;
         border: none;
         padding: 15px;
         border-radius: 30px;
         width: fit-content;
         font-size: 16px;
+        font-weight: bold;
     }
 
     .search__s2 {
         padding: 0;
     }
+
+    /* Home image */
+    .home {
+        background-color: #DCCAFF;
+        border: none;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        color: #301D49;
+        /* font-size: 45px; */
+    }
+
+    .home__s1 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px;
+        margin: 20px 10px 0 10px;
+    }
+
+    .home__s1__row1 {
+        font-size: 12px;
+    }
+
+    .home__s1__row1 span {
+        background-color: white;
+        padding: 5px;
+        margin-left: 5px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .home__s1__row4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        background-color: #301D49;
+        padding: 15px;
+        border: none;
+        border-radius: 100px;
+        color: white;
+        width: fit-content;
+    }
+
+    .home__s1__row4:hover {
+        background-color: #52327C;
+    }
+
+    .home__s2 {
+        display: none;
+    }
+    .home__s2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .home__s2 img {
+        width: 350px;
+    }
+
 
 
 }
