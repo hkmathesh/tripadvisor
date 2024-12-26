@@ -20,6 +20,7 @@ body {
     gap: 10px;
     padding: 10px;
     margin: 10px;
+    font-weight: 500;
 }
 
 .header__s2 {
@@ -48,7 +49,11 @@ body {
     align-items: center;
 }
 
-.header__s4 {
+.header__s4{
+    display: none;
+}
+
+.header__s5 {
     display: none;
 }
 
@@ -81,7 +86,7 @@ body {
     white-space: nowrap;
     /* Prevents wrapping of navbar items */
     padding-bottom: 5px;
-
+    border-bottom: 2px solid transparent;
 }
 
 .navbar__items:hover {
@@ -214,15 +219,59 @@ body {
     display: none;
 }
 
+/* Award-winning meal */
+.meal {
+    margin: 10px;
+    /* margin: 10px auto; */
 
+}
 
+.meal__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 1200px;
+    /* overflow: hidden; */
+}
+
+.meal__items {
+    flex: 0 0 auto;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.meal__items:hover {
+    opacity: 0.8;
+}
+
+.meal__items img {
+    width: 100%;
+    height: auto;
+}
+
+.meal__items h2 {
+    /* display: block; */
+    color: white;
+    width: 100%;
+    padding: 5px;
+    white-space: nowrap;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
 
 
 
 /* Responsive designs */
 
 /* Tablet */
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 766px) {
 
     body {
         font-size: 16px;
@@ -253,24 +302,33 @@ body {
         display: none;
     }
 
-    .header__s4 {
+    .header__s5 {
         display: flex;
     }
 
-    .header__s4__signin-btn {
+    .header__s5__one {
+        display: none;
+    }
+  
+    .header__s5__two {
+        display: flex;
+    }
+
+    .header__s5__two__signin-btn {
         background-color: black;
         border: none;
-        padding: 10px;
-        border-radius: 30px;
+        padding: 10px 20px;
+        border-radius: 50px;
         width: 100%;
-        font-size: 14px;
+        font-size: 16px;
         color: white;
     }
 
-    .header__s4__signin-btn:hover {
+    .header__s5__two__signin-btn:hover {
         opacity: 0.8;
     }
 
+    /* Where to */
     .whereto {
         display: flex;
         justify-content: center;
@@ -336,7 +394,8 @@ body {
         flex-direction: row;
         gap: 5px;
         color: #301D49;
-        /* font-size: 45px; */
+        margin: 10px;
+        padding: 30px 0 0 30px;
     }
 
     .home__s1 {
@@ -345,6 +404,7 @@ body {
         gap: 10px;
         justify-content: flex-start;
         align-items: flex-start;
+        text-align: start;
         padding: 10px;
         margin: 20px 10px 0 10px;
     }
@@ -382,19 +442,88 @@ body {
     .home__s2 {
         display: none;
     }
+
     .home__s2 {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
+
     .home__s2 img {
         width: 350px;
     }
-
-
-
 }
+
+/* Laptops */
+@media screen and (min-width: 1024px) {
+
+    /* Header */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .header__s1 {
+        display: none;
+    }
+
+    .header__s4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        
+    }
+
+    .header__s4 p{
+        padding: 10px 20px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    .header__s4 p:hover{
+        background-color: #F2F2F2;
+    }
+
+    #header__s4__four:hover{
+        background-color: transparent; 
+        text-decoration: underline;
+        opacity: 0.7;
+    }
+
+    .header__s5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header__s5__one {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+
+    }
+
+    .header__s5__one:hover{
+        background-color: #F2F2F2;
+    }
+
+    .header__s2 {
+        flex-grow: 0;
+    }
+}
+
+
+
+
 
 /* Phones */
 @media screen and (max-width: 756px) {
