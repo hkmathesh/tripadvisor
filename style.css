@@ -26,7 +26,7 @@ body {
     z-index: 1;
     background-color: white;
     padding: 10px 20px;
-    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
 }
 
 .header__s2 {
@@ -63,10 +63,13 @@ body {
     display: none;
 }
 
+.header__s1, .header__s2, .header__s3, .header__s4 p, .header__s5__one, .header__s5__two__signin-btn{
+    cursor: pointer;
+}
+
 /* Where to */
 .whereto {
     display: none;
-    ;
 }
 
 /* Navbar */
@@ -230,35 +233,37 @@ body {
     margin: 20px;
 }
 
-.list__container{
+.list__container {
     display: flex;
     gap: 20px;
+    flex-wrap: nowrap;
     margin-top: 10px;
     width: 100%;
     overflow-x: scroll;
     padding-bottom: 5px;
 }
 
-.meal__items {
-    width: 300px;
-    flex: 0 0 auto;
+.container__items {
+    min-width: 300px;
+    min-height: 300px;
+    flex: 1 0 60%;
     border: none;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
 }
 
-.meal__items:hover {
+.container__items:hover {
     opacity: 0.8;
 }
 
-.meal__items img {
+.container__items img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.text-overlay{
+.text-overlay {
     color: white;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     width: 100%;
@@ -267,7 +272,7 @@ body {
     bottom: 0;
 }
 
-.text-overlay h2 {
+.text-overlay-nowrap {
     white-space: nowrap;
     padding: 5px;
 }
@@ -278,36 +283,35 @@ body {
 }
 
 .list__items {
-    width: 300px;
-    flex: 0 0 auto;
+    min-width: 300px;
+    flex: 1 0 60%;
     border: none;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 5px;
 }
 
-.creator__info{
+.list__info {
     text-align: center;
     vertical-align: middle;
     height: 50%;
 }
 
-.creator__info span:hover{
+.list__info span:hover {
     color: gray;
     text-decoration: underline;
 }
 
-.list__items img:hover {
-    opacity: 0.8;
-}
-
-.list__items img {
+.cover_img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    min-height: 300px;
+}
+
+.cover_img:hover {
+    opacity: 0.8;
 }
 
 /* Tour  */
@@ -315,11 +319,75 @@ body {
     margin: 20px;
 }
 
-.tour__info{
-    text-align: start;
-    vertical-align: top;
+.tour__info {
     height: 50%;
+    padding-left: 2px;
 }
+
+.list__img {
+    position: relative;
+}
+
+.heart {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.heart img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.heart:hover {
+    background-color: #bfbbaa;
+}
+
+/* More to explore */
+.explore{
+    background-color: #F2F1EC;
+    padding: 20px 20px 40px 20px;
+}
+
+/* Dream Your Next Trip */
+.next-trip{
+    margin: 20px;
+}
+
+.next-trip > h2{
+    margin-bottom: 10px;
+}
+
+.text-overlay-wrap {
+    white-space: wrap;
+    padding: 10px;
+}
+
+#h2-normal{
+    font-weight: normal;
+}
+
+/* Top destinations for your next holiday */
+.next-holiday {
+    margin: 20px;
+}
+
+/* Home Rentals Near You */
+.rentals{
+    margin: 20px;
+}
+
+.rentals > h2{
+    margin-bottom: 10px;
+}
+
+
+
+
 
 
 /* Responsive designs */
@@ -442,6 +510,16 @@ body {
     .home__s1__row4:hover {
         background-color: #52327C;
     }
+
+    /* Award-winning meal */
+    .container__items {
+        flex: 1 0 40%;
+    }
+
+    /* Fave travel creators */
+    .list__items {
+        flex: 1 0 40%;
+    }
 }
 
 /* Laptops */
@@ -516,6 +594,22 @@ body {
     .search {
         margin: 20px 9% 40px 9%;
     }
+
+    /* Award-winning meal */
+    .container__items {
+        min-width: 250px;
+        flex: 1 0 23.5%;
+    }
+
+    /* Fave travel creators */
+    .list__items {
+        min-width: 250px;
+        flex: 1 0 23.5%;
+    }
+
+    .cover_img {
+        min-height: 250px;
+    }
 }
 
 /* Desktops */
@@ -532,6 +626,22 @@ body {
     /* Search box */
     .search {
         margin: 20px 12% 40px 12%;
+    }
+
+    /* Award-winning meal */
+    .container__items {
+        min-width: 210px;
+        flex: 1 0 23.5%;
+    }
+
+    /* Fave travel creators */
+    .list__items {
+        min-width: 210px;
+        flex: 1 0 23.5%;
+    }
+
+    .cover_img {
+        min-height: 210px;
     }
 }
 
