@@ -504,8 +504,8 @@
     <div class="footer">
         <div class="footer__s1">
             <div class="footer__s1__col-1">
-                <div>
-                    <p>About Tripadvisor</p>
+                <div class="footer__s1__col-1__group">
+                    <p class="footer__s1__col-1__group__title" onclick="click()"><span>+ &nbsp;&nbsp;</span>About Tripadvisor</p>
                     <ul>
                         <li>About Us</li>
                         <li>Press</li>
@@ -516,8 +516,8 @@
                         <li>Accessibility Statement</li>
                     </ul>
                 </div>
-                <div>
-                    <p>Explore</p>
+                <div class="footer__s1__col-1__group">
+                    <p class="footer__s1__col-1__group__title"><span>+ &nbsp;&nbsp;</span>Explore</p>
                     <ul>
                         <li>Write a review</li>
                         <li>Add a Place</li>
@@ -528,26 +528,33 @@
                         <li>Travel Articles</li>
                     </ul>
                 </div>
-                <div>
-                    <p>Do Business With Us</p>
+                <div class="footer__s1__col-1__group">
+                    <p class="footer__s1__col-1__group__title"><span>+ &nbsp;&nbsp;</span>Do Business With Us</p>
                     <ul>
                         <li>Owners & DMO/CVB</li>
                         <li>Business Advantage</li>
                         <li>Sponsored Placements</li>
                         <li>Access our Content API</li>
                     </ul>
+                    <div class="footer__s1__col-1__group" id="sub_group">
+                        <p class="footer__s1__col-1__group__title"><span>+ &nbsp;&nbsp;</span>Get The App</p>
+                        <ul>
+                            <li>iPhone App</li>
+                            <li>Android App</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
+                <!-- <div>
                     <p>Get The App</p>
                     <ul>
                         <li>iPhone App</li>
                         <li>Android App</li>
                     </ul>
-                </div>
+                </div> -->
             </div>
             <div class="footer__s1__col-2">
-                <div>
-                    <p>Tripadvisor Sites</p>
+                <div class="footer__s1__col-1__group">
+                    <p class="footer__s1__col-1__group__title"><span>+ &nbsp;&nbsp;</span>Tripadvisor Sites</p>
                     <p id="footer__s1__col-2__p">Book tours and attraction tickets on <span>Viator</span></p>
                 </div>
             </div>
@@ -601,6 +608,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function click(){
+            document.getElementsByClassName("footer__s1__col-1__group__title").style.display="";
+        }
+    </script>
 
 </body>
 

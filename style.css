@@ -409,8 +409,12 @@ body {
 .footer__s1__col-1 {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     width: 50%;
+}
+
+#sub_group{
+    margin-top: 15px;
 }
 
 .footer__s1__col-1 ul,
@@ -676,8 +680,16 @@ body {
     .footer__s1__col-1 {
         display: flex;
         flex-direction: row;
-        gap: 15px;
+        gap: 10px;
         width: 50%;
+    }
+
+    .footer__s1__col-1 div{
+        flex: 1;
+    }
+
+    .footer__s1__col-1__group__title span{
+        display: none;
     }
 
     .footer__s1__col-1 ul,
