@@ -417,8 +417,21 @@ body {
     margin-top: 15px;
 }
 
+.footer__s1__col-1__group__title:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* .group__links{
+    display: none;
+} */
+
+#links_about, #links_explore, #links_business, #links_app, #links__sites{
+    display: none;
+}
+
 .footer__s1__col-1 ul,
-#footer__s1__col-2__p {
+.footer__s1__col-2__p {
     list-style: none;
     font-size: 12px;
 }
@@ -433,11 +446,11 @@ body {
     cursor: pointer;
 }
 
-#footer__s1__col-2__p span {
+.footer__s1__col-2__p span {
     text-decoration: underline;
 }
 
-#footer__s1__col-2__p span:hover {
+.footer__s1__col-2__p span:hover {
     opacity: 0.8;
     cursor: pointer;
 }
@@ -692,8 +705,17 @@ body {
         display: none;
     }
 
+    .footer__s1__col-1__group__title:hover{
+        text-decoration: none;
+        cursor: auto;
+    }
+
+    #group__links{
+        display: block;
+    }
+
     .footer__s1__col-1 ul,
-    #footer__s1__col-2__p {
+    .footer__s1__col-2__p {
         font-size: 13px;
     }
 
@@ -712,11 +734,11 @@ body {
         gap: 15px;
     }
 
-    #footer__s1__col-2__p span {
+    .footer__s1__col-2__p span {
         text-decoration: underline;
     }
 
-    #footer__s1__col-2__p span:hover {
+    .footer__s1__col-2__p span:hover {
         opacity: 0.8;
         cursor: pointer;
     }
