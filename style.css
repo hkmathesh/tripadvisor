@@ -413,6 +413,11 @@ body {
     width: 50%;
 }
 
+.footer__s1__col-1__group__col {
+    display: flex;
+    flex-direction: row;
+}
+
 #sub_group{
     margin-top: 15px;
 }
@@ -422,18 +427,15 @@ body {
     cursor: pointer;
 }
 
-/* .group__links{
-    display: none;
-} */
-
-#links_about, #links_explore, #links_business, #links_app, #links__sites{
-    display: none;
+.footer__s1__col-1 ul {
+    display: none; /* Initially hidden for small screens */
 }
 
 .footer__s1__col-1 ul,
 .footer__s1__col-2__p {
     list-style: none;
     font-size: 12px;
+    display: none; /* Initially hidden for small screens */
 }
 
 .footer__s1__col-1 li {
@@ -701,8 +703,8 @@ body {
         flex: 1;
     }
 
-    .footer__s1__col-1__group__title span{
-        display: none;
+    .margin__space {
+        display: none;  /* Hide "+" sign on larger screens */
     }
 
     .footer__s1__col-1__group__title:hover{
@@ -710,13 +712,14 @@ body {
         cursor: auto;
     }
 
-    #group__links{
-        display: block;
+    .footer__s1__col-1 ul {
+        display: block; /* Always visible for larger screens */
     }
 
     .footer__s1__col-1 ul,
     .footer__s1__col-2__p {
         font-size: 13px;
+        display: block; /* Always visible for larger screens */
     }
 
     .footer__s1__col-1 li {
@@ -890,6 +893,10 @@ body {
 
     .header__s2 {
         flex-grow: 0;
+    }
+
+    .header__s5__two {
+        display: none;
     }
 
     /* Navbar */
