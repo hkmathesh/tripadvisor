@@ -426,6 +426,10 @@ body {
     margin-top: 15px;
 }
 
+.footer__s1__col-1__group__title {
+    margin-left: 10px;
+}
+
 .footer__s1__col-1__group__title:hover {
     text-decoration: underline;
 }
@@ -708,6 +712,10 @@ body {
 
     .margin__space {
         display: none;  /* Hide "+" sign on larger screens */
+    }
+
+    .footer__s1__col-1__group__title {
+        margin-left: 0;
     }
 
     .footer__s1__col-1__group__title:hover{
