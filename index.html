@@ -164,6 +164,7 @@
                     <h4>By <span>Ashlyn S</span></h4>
                     <h4><span>3 family-friendly days in Rome</span></h4>
                     <p>❤️</p>
+                    <p>21 items</p>
                 </div>
             </div>
             <div class="list__items">
@@ -505,9 +506,10 @@
         <div class="footer__s1">
             <div class="footer__s1__col-1">
                 <div class="footer__s1__col-1__group">
-                    <div class="footer__s1__col-1__group__col">
+                    <div class="footer__s1__col-1__group__col" id="footer__pointer"
+                        onclick="toggleLinks('links_about')">
                         <p class="margin__space">+ &nbsp;&nbsp;</p>
-                        <p class="footer__s1__col-1__group__title" onclick="toggleLinks('links_about')">
+                        <p class="footer__s1__col-1__group__title">
                             About Tripadvisor
                         </p>
                     </div>
@@ -525,9 +527,10 @@
                     </div>
                 </div>
                 <div class="footer__s1__col-1__group">
-                    <div class="footer__s1__col-1__group__col">
-                        <p class="margin__space">+ &nbsp;&nbsp;</p>
-                        <p class="footer__s1__col-1__group__title" onclick="toggleLinks('links_explore')">
+                    <div class="footer__s1__col-1__group__col" id="footer__pointer"
+                        onclick="toggleLinks('links_explore')">
+                        <p class="margin__space" o>+ &nbsp;&nbsp;</p>
+                        <p class="footer__s1__col-1__group__title">
                             Explore
                         </p>
                     </div>
@@ -545,9 +548,10 @@
                     </div>
                 </div>
                 <div class="footer__s1__col-1__group">
-                    <div class="footer__s1__col-1__group__col">
+                    <div class="footer__s1__col-1__group__col" id="footer__pointer"
+                        onclick="toggleLinks('links_business')">
                         <p class="margin__space">+ &nbsp;&nbsp;</p>
-                        <p class="footer__s1__col-1__group__title" onclick="toggleLinks('links_business')">
+                        <p class="footer__s1__col-1__group__title">
                             Do Business With Us
                         </p>
                     </div>
@@ -561,9 +565,10 @@
                         </ul>
                     </div>
                     <div class="footer__s1__col-1__group" id="sub_group">
-                        <div class="footer__s1__col-1__group__col">
+                        <div class="footer__s1__col-1__group__col" id="footer__pointer"
+                            onclick="toggleLinks('links_app')">
                             <p class="margin__space">+ &nbsp;&nbsp;</p>
-                            <p class="footer__s1__col-1__group__title" onclick="toggleLinks('links_app')">
+                            <p class="footer__s1__col-1__group__title">
                                 Get The App
                             </p>
                         </div>
@@ -579,9 +584,10 @@
             </div>
             <div class="footer__s1__col-2">
                 <div class="footer__s1__col-1__group">
-                    <div class="footer__s1__col-1__group__col">
+                    <div class="footer__s1__col-1__group__col" id="footer__pointer"
+                        onclick="toggleLinks('links__sites')">
                         <p class="margin__space">+ &nbsp;&nbsp;</p>
-                        <p class="footer__s1__col-1__group__title" onclick="toggleLinks('links__sites')">
+                        <p class="footer__s1__col-1__group__title">
                             Tripadvisor Sites
                         </p>
                     </div>
@@ -654,13 +660,19 @@
 
             if (isMobile) {
                 const element = document.getElementById(id);
-                if (element.style.display === 'none'  || element.style.display === '') {
+                const pointer = document.querySelector(`#footer__pointer[onclick="toggleLinks('${id}')"] .margin__space`);
+
+                if (element.style.display === 'none' || element.style.display === '') {
                     element.style.display = 'block';
+                    pointer.innerHTML = '- &nbsp;&nbsp;';
                 } else {
                     element.style.display = 'none';
+                    pointer.innerHTML = '+ &nbsp;&nbsp;';
                 }
             }
-        }   
+        }
+
+
     </script>
 
 </body>

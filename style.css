@@ -418,13 +418,16 @@ body {
     flex-direction: row;
 }
 
-#sub_group{
+#footer__pointer {
+    cursor: pointer;
+}
+
+#sub_group {
     margin-top: 15px;
 }
 
-.footer__s1__col-1__group__title:hover{
+.footer__s1__col-1__group__title:hover {
     text-decoration: underline;
-    cursor: pointer;
 }
 
 .footer__s1__col-1 ul {
